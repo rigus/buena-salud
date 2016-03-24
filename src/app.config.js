@@ -9,5 +9,9 @@ module.exports = function (ngApp){
         url: '/',
         template: require('./app/home/home.html')
       })
+      .state('login',{
+        url: '/login',
+        template: require('./app/main/login/login.html')
+      })
   }
 }
