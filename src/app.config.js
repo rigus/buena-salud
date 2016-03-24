@@ -11,7 +11,11 @@ module.exports = function (ngApp){
       })
       .state('login',{
         url: '/login',
-        template: require('./app/main/login/login.html')
+        template: require('./app/login/login.html')
+      })
+      .state('main',{
+        url: '/buena-salud',
+        template: require('./app/main/main.html')
       })
   }
 }
