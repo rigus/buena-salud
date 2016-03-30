@@ -27,5 +27,13 @@ module.exports = function (ngApp){
         url: '/consultas',
         template: require('./app/main/secretaria/consultas/consultas.html')
       })
+      .state('main.recepcionista.doctores',{
+        url: '/doctores',
+        template: require('./app/main/secretaria/doctores/doctores.html')
+      })
+      .state('main.recepcionista.pacientes',{
+        url: '/pacientes',
+        template: require('./app/main/secretaria/pacientes/pacientes.html')
+      })
   }
 }
