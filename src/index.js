@@ -1,6 +1,7 @@
 var angular = require('angular');
 require ('angular-ui-router');
 window.$ = window.jQuery = require('jquery');
+require('../node_modules/bootstrap/dist/js/bootstrap.js')
 var app = angular.module('appBuenaSalud', [
   'ui.router',
   'appBuenaSalud.home',
