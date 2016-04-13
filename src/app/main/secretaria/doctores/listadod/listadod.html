@@ -1,0 +1,38 @@
+<section class="secretaria-consultas">
+	<table class="table table-striped">
+	    <thead>
+	      <tr>
+	        <th><b>Firstname</b></th>
+	        <th><b>Lastname</b></th>
+	        <th><b>Thelephone</b></th>
+	        <th><b>Email</b></th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td>Esau</td>
+	        <td>Martinez Contreras</td>
+	        <td>8444448338</td>
+	        <td>esaumtz@example.com</td>
+	      </tr>
+	      <tr>
+	        <td>Maria Lorena</td>
+	        <td>Lazcano Fdz</td>
+	        <td>8448926864</td>
+	        <td>lorenalazcano@example.com</td>
+	      </tr>
+	      <tr>
+	        <td>Daniel</td>
+	        <td>Noriega</td>
+	        <td>8442923335</td>
+	        <td>d.norris@example.com</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<button class='btn-form' type="button" ng-click="vm.formularioOpen = true;" name="button">Agregar doctor</button>
+
+	<secretaria-formulario-doctor
+	  ng-if="vm.formularioOpen"
+	  open="vm.formularioOpen"
+	></secretaria-formulario-doctor>
+</section>

@@ -29,11 +29,11 @@ module.exports = function (ngApp){
       })
       .state('main.recepcionista.doctores',{
         url: '/doctores',
-        template: require('./app/main/secretaria/doctores/doctores.html')
+        template: require('./app/main/secretaria/doctores/listadod/listadod.html')
       })
       .state('main.recepcionista.pacientes',{
         url: '/pacientes',
-        template: require('./app/main/secretaria/pacientes/pacientes.html')
+        template: require('./app/main/secretaria/pacientes/listadop/listadop.html')
       })
   }
 }
