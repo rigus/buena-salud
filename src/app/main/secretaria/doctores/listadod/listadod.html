@@ -2,18 +2,22 @@
 	<table class="table table-striped">
 	    <thead>
 	      <tr>
+					<td>#</td>
 	        <th><b>Nombre</b></th>
 	        <th><b>Apellidos</b></th>
 	        <th><b>Tel/Cel</b></th>
 	        <th><b>Correo</b></th>
+					<th><b>Especialidad</b></th>
 	      </tr>
 	    </thead>
 	    <tbody>
-	      <tr>
-	        <td></td>
-	        <td></td>
-	        <td></td>
-	        <td></td>
+	      <tr ng-repeat="doctor in vm.doctores">
+					<td>{{doctor.id_doctor}}</td>
+          <td>{{doctor.nombre_doc}}</td>
+          <td>{{doctor.paterno_doc}} {{doctor.materno_doc}}</td>
+          <td>{{doctor.correo_doc}}</td>
+          <td>{{doctor.telefono_doc}}</td>
+          <td>{{doctor.especialidad}}</td>
 					<td>
 						<i class="fa fa-trash" aria-hidden="true"></i>
 						<i class="fa fa-pencil-square" aria-hidden="true"></i>

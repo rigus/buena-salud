@@ -31,7 +31,12 @@ module.exports = function (ngApp){
         url: '/doctores',
         template: require('./app/main/secretaria/doctores/listadod/listadod.html'),
         controller : 'DoctorCtrl',
-        controllerAs : 'vm'
+        controllerAs : 'vm',
+        resolve: {
+          arrDoctores: function(DoctorService){
+            return DoctorService.getDoctores();
+          }
+        }
       })
       .state('main.recepcionista.pacientes',{
         url: '/pacientes',
