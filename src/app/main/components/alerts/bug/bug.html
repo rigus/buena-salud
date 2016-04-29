@@ -1,18 +1,6 @@
-<section class="alertas row center-xs middle-xs ">
-  <div class="alertas-container row around-xs middle-xs col-xs-5">
-    <div class="alertas-container-close col-xs-12 row end-xs">
-      <i class="fa fa-times"></i>
-      <hr class="col-xs-12">
-    </div>
-    <div class="alertas-container-icono col-xs-3">
-      <img src="./img/bug2.png" alt="">
-    </div>
-    <div class="alertas-container-msj">
-      <h5>No puedes eliminarlo, este doctor está asociado a una consulta.</h5>
-    </div>
-    <div class="alertas-container-buttons col-xs-12 row end-xs">
-      <hr class="col-xs-12">
-      <button type="button" class="btn btn-primary" name="button">Aceptar</button>
-    </div>
-  </div>
-</section>
+<div class="alert alert-danger row">
+  <p>
+    <strong><i class="fa fa-thumbs-o-up"></i> Error!</strong> {{vm.error}}
+  </p>
+  <i class="fa fa-times"></i>
+</div>

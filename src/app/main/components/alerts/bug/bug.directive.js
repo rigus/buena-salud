@@ -5,8 +5,12 @@ module.exports = function (ngModule) {
     function alertBug() {
       var directive = {
         restrict: 'E',
+        scope:{
+          error: "@"
+        },
         template: require('./bug.html'),
-        controller: 'BugsCtrl'
+        controller: 'BugsCtrl',
+        controllerAs: "vm"
       };
       return directive;
     }

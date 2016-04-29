@@ -1,7 +1,8 @@
 module.exports = function (ngModule){
   ngModule.controller('SecreDoctorFormularioUpdateCtrl', SecreDoctorFormularioUpdateCtrl)
   /*@ngInject*/
-  function SecreDoctorFormularioUpdateCtrl (DoctorService, $state){
+  function SecreDoctorFormularioUpdateCtrl (DoctorService, $state, $scope, $compile){
+    var body = angular.element(document).find('body');
     var vm = this;
     vm.especialidades=[]
     vm.doctores=[]
@@ -22,7 +23,7 @@ vm.updateDoctor = function(){
           console.log('update');
           vm.open = false;
           $state.reload();
-         // body.append($compile("<alert-succes correcto='"+ response.msj +"'></alert-succes>")($scope));
+         body.append($compile("<alert-succes correcto='"+ response.msj +"'></alert-succes>")($scope));
         }else {
           console.log(response.msj);
         }

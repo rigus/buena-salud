@@ -1,8 +1,8 @@
 module.exports = function (ngModule){
   ngModule.controller('DoctorCtrl', DoctorCtrl)
   /*@ngInject*/
-  function DoctorCtrl (arrDoctores, DoctorService){
-    console.log("doctorees");
+  function DoctorCtrl (arrDoctores, DoctorService, $state, $scope, $compile){
+    var body = angular.element(document).find('body');
     var vm = this;
     vm.doctores = arrDoctores;
 
@@ -15,9 +15,12 @@ module.exports = function (ngModule){
                 console.log('doctor eliminado');
                 //vm.isWarningOn = false;
                 $state.reload();
-                //body.append($compile("<alert-succes alertSucc='"+ vm.alertSucc  +"' vm.alertSucc='"+ true  +"'  ng-if='"+ vm.alertSucc  +"'  correcto='"+ response.msj +"'></alert-succes>")($scope));
-            }else {
+                body.append($compile("<alert-succes correcto='"+ response.msj +"'></alert-succes>")($scope));
               console.log(response.msj);
+            }else{
+              $state.reload();
+              body.append($compile("<alert-bug error='"+ response.msj +"'></alert-bug>")($scope));
+
             }
           }).catch(function(err){
             console.log(err);
