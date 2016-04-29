@@ -19,7 +19,7 @@
           <td>{{doctor.telefono_doc}}</td>
           <td>{{doctor.especialidad}}</td>
 					<td>
-						<i class="fa fa-trash" aria-hidden="true" ng-click="vm.warningOn = true;"></i>
+						<i class="fa fa-trash" aria-hidden="true" ng-click="vm.warningOn = true; vm.doctorDelete=doctor;"></i>
 						<i class="fa fa-pencil-square" aria-hidden="true" ng-click="vm.formUpdateOpen = true; vm.medico=doctor;"></i>
 					</td>
 	      </tr>
