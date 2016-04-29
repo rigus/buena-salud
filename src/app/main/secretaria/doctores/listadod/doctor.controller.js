@@ -19,7 +19,7 @@ module.exports = function (ngModule){
               console.log(response.msj);
             }else{
               $state.reload();
-              body.append($compile("<alert-bug error='"+ response.msj +"'></alert-bug>")($scope));
+              body.append($compile("<alert-error error='"+ response.msj +"'></alert-error>")($scope));
 
             }
           }).catch(function(err){
