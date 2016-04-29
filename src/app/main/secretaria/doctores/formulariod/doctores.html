@@ -26,6 +26,12 @@
 						<label for="">Email</label>
 						<input type="text" class="form-control">
 					</div>
+					<div class="form-group">
+						<label for="">Especialidad</label>
+						<select class="form-control" id="sel1" ng-model="vm.doctor.id_especialidad" required>
+						<option value="{{especialidad.id_especialidad}}" ng-repeat="especialidad in vm.especialidades">{{especialidad.especialidad}}</option>
+						</select>
+					</div>
 				</div>
 				<div class="container-btn col-xs-12">
 					<button type="button" name="button">Agregar Doctor</button>

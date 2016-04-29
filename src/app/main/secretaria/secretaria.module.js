@@ -7,4 +7,7 @@ module.exports = function (){
   require('./doctores/formulariod/doctores.controller')(secretaria);
   require('./pacientes/formulariop/formulariop.directive')(secretaria);
   require('./pacientes/formulariop/pacientes.controller')(secretaria);
+  require('./doctores/doctor.controller')(secretaria);
+  require('./doctores/doctores.service')(secretaria);
+
 }

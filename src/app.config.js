@@ -29,7 +29,9 @@ module.exports = function (ngApp){
       })
       .state('main.recepcionista.doctores',{
         url: '/doctores',
-        template: require('./app/main/secretaria/doctores/listadod/listadod.html')
+        template: require('./app/main/secretaria/doctores/listadod/listadod.html'),
+        controller : 'DoctorCtrl',
+        controllerAs : 'vm'
       })
       .state('main.recepcionista.pacientes',{
         url: '/pacientes',

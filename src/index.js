@@ -16,3 +16,4 @@ require('./app/login/login.module')();
 require('./app/main/main.module')();
 require('./app/main/components/components.module')();
 require('./app.config')(app);
+require('./app.constants')(app);
