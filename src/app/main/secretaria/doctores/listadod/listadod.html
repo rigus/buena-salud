@@ -20,7 +20,7 @@
           <td>{{doctor.especialidad}}</td>
 					<td>
 						<i class="fa fa-trash" aria-hidden="true"></i>
-						<i class="fa fa-pencil-square" aria-hidden="true"></i>
+						<i class="fa fa-pencil-square" aria-hidden="true" ng-click="vm.formUpdateOpen = true; vm.medico=doctor;"></i>
 					</td>
 	      </tr>
 	    </tbody>
@@ -30,4 +30,10 @@
 	  ng-if="vm.formularioOpen"
 	  open="vm.formularioOpen"
 	></secretaria-formulario-doctor>
+	<secretaria-formulario-update-doctor
+		ng-if="vm.formUpdateOpen"
+		abierto="vm.formUpdateOpen"
+		doctor = "vm.medico"
+
+	></secretaria-formulario-update-doctor>
 </section>

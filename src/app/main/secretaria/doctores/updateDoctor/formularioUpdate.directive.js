@@ -1,12 +1,12 @@
 module.exports = function (ngModule){
-  ngModule.directive ('secretariaFormularioDoctor',secretariaFormularioDoctor)
+  ngModule.directive ('secretariaFormularioUpdateDoctor',secretariaFormularioUpdateDoctor)
 
   /*@ngInject*/
-  function secretariaFormularioDoctor (){
+  function secretariaFormularioUpdateDoctor (){
     return {
       restrict : 'E',
       scope: {
-        open: "=",
+        abierto: "=",
         doctor: '='
       },
       template: require('./formularioUpdate.html'),
