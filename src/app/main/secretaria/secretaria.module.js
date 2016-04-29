@@ -9,5 +9,7 @@ module.exports = function (){
   require('./pacientes/formulariop/pacientes.controller')(secretaria);
   require('./doctores/listadod/doctor.controller')(secretaria);
   require('./doctores/doctores.service')(secretaria);
+  require('./doctores/updateDoctor/formularioUpdate.controller')(secretaria);
+  require('./doctores/updateDoctor/formularioUpdate.directive')(secretaria);
 
 }

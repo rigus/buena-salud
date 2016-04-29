@@ -1,7 +1,12 @@
 module.exports = function (ngApp){
   ngApp.config(config)
   /*@ngIject*/
-  function config ($stateProvider, $urlRouterProvider){
+  function config ($stateProvider, $urlRouterProvider, $httpProvider){
+
+    $httpProvider.defaults.headers.common = {};
+    $httpProvider.defaults.headers.post = {};
+    $httpProvider.defaults.headers.put = {};
+    $httpProvider.defaults.headers.patch = {};
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
