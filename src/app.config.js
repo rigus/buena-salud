@@ -45,7 +45,14 @@ module.exports = function (ngApp){
       })
       .state('main.recepcionista.pacientes',{
         url: '/pacientes',
-        template: require('./app/main/secretaria/pacientes/listadop/listadop.html')
+        template: require('./app/main/secretaria/pacientes/listadop/listadop.html'),
+        controller : 'PacienteCtrl',
+        controllerAs : 'vm',
+        resolve: {
+          arrPacientes: function(PacienteService){
+            return PacienteService.getPacientes();
+          }
+        }
       })
   }
 }

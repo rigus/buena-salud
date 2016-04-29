@@ -2,47 +2,29 @@
 	<table class="table table-striped">
 	    <thead>
 	      <tr>
-	        <th><b>No. Cliente</b></th>
-	        <th><b>Nombre</b></th>
-	        <th><b>Apellidos</b></th>
-	        <th><b>Correo</b></th>
+					<th>#</th>
+					<th>Nombre</th>
+					<th>Paterno</th>
+					<th>Materno</th>
+					<th>Telefono</th>
+					<th>Correo</th>
 					<th></th>
 	      </tr>
 	    </thead>
 	    <tbody>
-	      <tr>
-	        <td>01</td>
-	        <td>John</td>
-	        <td>Doe</td>
-	        <td>john@example.com</td>
-					<td>
-						<i class="fa fa-trash" aria-hidden="true"></i>
-						<i class="fa fa-pencil-square" aria-hidden="true"></i>
-						<i class="fa fa-file-text" aria-hidden="true"></i>
-					</td>
-	      </tr>
-	      <tr>
-	        <td>02</td>
-	        <td>Mary</td>
-	        <td>Moe</td>
-	        <td>mary@example.com</td>
-					<td>
-						<i class="fa fa-trash" aria-hidden="true"></i>
-						<i class="fa fa-pencil-square" aria-hidden="true"></i>
-						<i class="fa fa-file-text" aria-hidden="true"></i>
-					</td>
-	      </tr>
-	      <tr>
-	        <td>03</td>
-	        <td>July</td>
-	        <td>Dooley</td>
-	        <td>july@example.com</td>
-					<td>
-						<i class="fa fa-trash" aria-hidden="true"></i>
-						<i class="fa fa-pencil-square" aria-hidden="true"></i>
-						<i class="fa fa-file-text" aria-hidden="true"></i>
-					</td>
-	      </tr>
+				<tr ng-repeat="paciente in vm.pacientes">
+          <td>{{paciente.id_paciente}}</td>
+          <td>{{paciente.nombre_pac}}</td>
+          <td>{{paciente.paterno_pac}}</td>
+          <td>{{paciente.materno_pac}}</td>
+          <td>{{paciente.telefono_pac}}</td>
+          <td>{{paciente.correo_pac}}</td>
+          <td>
+            <i class="fa fa-file-text" ng-click="vm.formularioOpen2 = true"></i>
+            <i class="fa fa-ban"></i>
+            <i class="fa fa-pencil" ng-click="vm.pacienteSelected=paciente; vm.formularioOpen = true;"></i>
+          </td>
+        </tr>
 	    </tbody>
 	  </table>
 	<button class='btn-form' type="button" ng-click="vm.formularioOpen = true;" name="button">Agregar Paciente</button>
