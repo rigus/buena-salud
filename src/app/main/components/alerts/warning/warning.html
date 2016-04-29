@@ -1,0 +1,23 @@
+<section class="alertas row center-xs middle-xs ">
+  <div class="alertas-container row around-xs middle-xs col-xs-5">
+    <div class="alertas-container-close col-xs-12 row end-xs">
+      <i class="fa fa-times" ng-click="vm.isWarningOn = false;"></i>
+      <hr class="col-xs-12">
+    </div>
+    <div class="alertas-container-icono col-xs-3">
+      <img src="./img/warning.png" alt="">
+    </div>
+    <div class="alertas-container-msj">
+      <h5>¡Advertencia! {{vm.msjWarning}}</h5>
+    </div>
+    <div class="alertas-container-buttons col-xs-12 row end-xs">
+      <hr class="col-xs-12">
+      <button type="button" class="btn btn-default" ng-click="vm.isWarningOn = false;"  name="button">Cancelar</button>
+      <button type="button" class="btn btn-primary" ng-click="vm.functionToInvoke(); vm.isAlertOn=true">Aceptar</button>
+    </div>
+  </div>
+  <alert-succes
+    ng-if="vm.isAlertOn"
+    is-alert-on="vm.isAlertOn"
+    msj-alert="asdasd"></alert-succes>
+</section>

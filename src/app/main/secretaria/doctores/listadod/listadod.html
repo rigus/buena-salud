@@ -19,7 +19,7 @@
           <td>{{doctor.telefono_doc}}</td>
           <td>{{doctor.especialidad}}</td>
 					<td>
-						<i class="fa fa-trash" aria-hidden="true"></i>
+						<i class="fa fa-trash" aria-hidden="true" ng-click="vm.warningOn = true;"></i>
 						<i class="fa fa-pencil-square" aria-hidden="true" ng-click="vm.formUpdateOpen = true; vm.medico=doctor;"></i>
 					</td>
 	      </tr>
@@ -36,4 +36,11 @@
 		doctor = "vm.medico"
 
 	></secretaria-formulario-update-doctor>
+
+	<alert-warning
+		ng-if="vm.warningOn"
+		is-warning-on = "vm.warningOn"
+		msj-warning="¿Estas seguro que quieres eliminar el doctor? una vez borrado no se podrá recuperar?"
+		function-to-invoke="vm.borrarDoctor(vm.doctorDelete)"
+	></alert-warning>
 </section>
