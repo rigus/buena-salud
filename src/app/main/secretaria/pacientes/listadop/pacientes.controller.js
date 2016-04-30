@@ -6,13 +6,13 @@ module.exports = function (ngModule){
     var vm = this;
     vm.pacientes = arrPacientes;
 
-    /*vm.borrarDoctor = function(doctorSelected){
-      console.log('Borrando al doctor',doctorSelected)
-       DoctorService.deleteDoctor(doctorSelected)
+    vm.borrarPaciente = function(pacienterSelected){
+      console.log('Borrando al paciente',pacienterSelected)
+       PacienteService.deletePaciente(pacienterSelected)
           .then(function(response){
             console.log(response);
             if (response.estatus == "ok") {
-                console.log('doctor eliminado');
+                console.log('paciente eliminado');
                 //vm.isWarningOn = false;
                 $state.reload();
                 body.append($compile("<alert-succes correcto='"+ response.msj +"'></alert-succes>")($scope));
@@ -25,7 +25,7 @@ module.exports = function (ngModule){
           }).catch(function(err){
             console.log(err);
           });
-    }*/
+    }
 
   }
 

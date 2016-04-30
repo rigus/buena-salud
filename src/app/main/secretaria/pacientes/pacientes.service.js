@@ -32,7 +32,7 @@ module.exports = function (ngModule){
       var deferred = $q.defer();
       var pacienteId = angular.fromJson(pacienteId);
       $http
-        .delete(URL.API + 'deletePaciente', {data: doctorId})
+        .delete(URL.API + 'deletePaciente', {data: pacienteId})
         .success(function(res) {
           deferred.resolve(res);
         })
