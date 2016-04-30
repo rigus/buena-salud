@@ -1,0 +1,104 @@
+<div class="popup form-pacientes">
+	<section class="secretaria-consultas row middle-xs center-xs">
+		<div class="secretaria-consultas-container col-xs-10 row middle-xs">
+			<form action="">
+				<div class="col-xs-4">
+					<div class='form-group'>
+						<label for="">Nombre</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.nombre_pac">
+					</div>
+					<div class="form-group">
+						<label for="">Paterno</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.paterno_pac">
+					</div>
+					<div class="form-group">
+						<label for="">Materno</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.materno_pac">
+					</div>
+					<div class="form-group">
+						<label for="">Fecha Nacimiento</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.fecha_nacimiento">
+					</div>
+					<div class="form-group">
+						<label for="">Curp</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.curp">
+					</div>
+					<div class="form-group">
+						<label for="">Sexo</label>
+						<select class="form-control" id="sel1" ng-model="vm.paciented.sexo"  required>
+	            <option>Masculino</option>
+	            <option>Femenino</option>
+	          </select>
+					</div>
+				</div>
+
+				<div class="col-xs-4">
+					<div class="form-group">
+						<label for="">Estado</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.estado">
+					</div>
+					<div class="form-group">
+						<label for="">Ciudad</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.municipio">
+					</div>
+					<div class="form-group">
+						<label for="">Colonia</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.direccion">
+					</div>
+					<div class="form-group">
+						<label for="">C.P.</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.cp">
+					</div>
+					<div class="form-group">
+						<label for="">Teléfono</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.correo_pac">
+					</div>
+					<div class="form-group">
+						<label for="">Email</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.telefono_pac">
+					</div>
+				</div>
+
+				<div class="col-xs-4">
+					<div class="form-group">
+						<label for="">Tipo Sangre</label>
+						<select class="form-control" id="sel1" ng-model="vm.paciented.sangre"  required>
+	            <option>A+</option>
+	            <option>O--</option>
+	          </select>
+					</div>
+					<div class="form-group">
+						<label for="">Alcoholismo</label>
+						<select class="form-control" id="sel1" ng-model="vm.paciented.alcoholismo"  required>
+	            <option>Si</option>
+	            <option>No-</option>
+	          </select>
+					</div>
+					<div class="form-group">
+						<label for="">Tabaquismo</label>
+						<select class="form-control" id="sel1" ng-model="vm.paciented.tabaquismo"  required>
+	            <option>Si</option>
+	            <option>No-</option>
+	          </select>
+					</div>
+					<div class="form-group">
+						<label for="">Antcdts Patologicos</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.antecedentes_p">
+					</div>
+					<div class="form-group">
+						<label for="">Antcdts No Patologicos</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.antecedentes_np">
+					</div>
+					<div class="form-group">
+						<label for="">Antcdtes Hereditarios</label>
+						<input type="text" class="form-control" ng-model="vm.paciente.antecedentes_h">
+					</div>
+				</div>
+				<div class="container-btn col-xs-12">
+					<button type="button" name="button" ng-click="vm.updatePaciente()">Agregar</button>
+					<button type="button" ng-click="abiertoform = false;" name="button">Cancelar</button>
+				</div>
+			</form>
+		</div>
+	</section>
+</div>

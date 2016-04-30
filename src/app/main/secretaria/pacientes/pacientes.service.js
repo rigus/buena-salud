@@ -6,7 +6,8 @@ module.exports = function (ngModule){
     var services = {
       getPacientes : getPacientes,
       deletePaciente : deletePaciente,
-      postPacientes : postPacientes
+      postPacientes : postPacientes,
+      putPaciente : putPaciente
 
     }
     return services;
@@ -49,6 +50,22 @@ module.exports = function (ngModule){
       $http
         .post(URL.API + 'postPacientes', paciente)
         .success(function(res) {
+          deferred.resolve(res);
+        })
+        .catch(function(res) {
+          //console.log(res);
+          deferred.reject(res);
+        });
+      return deferred.promise;
+    }
+
+    function putPaciente(req){
+      var deferred = $q.defer();
+      var req = angular.fromJson(req);
+      $http
+        .put(URL.API + 'putPaciente', req)
+        .success(function(res) {
+          //console.log(res);
           deferred.resolve(res);
         })
         .catch(function(res) {

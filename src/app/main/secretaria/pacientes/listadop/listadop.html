@@ -22,7 +22,7 @@
           <td>
             <i class="fa fa-file-text" ng-click="vm.formularioOpen2 = true"></i>
             <i class="fa fa-ban" ng-click="vm.pacienteDelete=paciente; vm.warningOn = true;"></i>
-            <i class="fa fa-pencil" ng-click="vm.pacienteSelected=paciente; vm.formularioOpen = true;"></i>
+            <i class="fa fa-pencil" ng-click="vm.patient=paciente; vm.formularioUpOpen = true;"></i>
           </td>
         </tr>
 	    </tbody>
@@ -32,6 +32,11 @@
 		ng-if= "vm.formularioOpen"
 		open = "vm.formularioOpen"
 	></secre-paciente-formulario>
+	<secretaria-formulario-update-paciente
+		ng-if="vm.formularioUpOpen"
+		abiertoform = "vm.formularioUpOpen"
+		paciente = "vm.patient"
+	></secretaria-formulario-update-paciente>
 	<alert-warning
 		ng-if="vm.warningOn"
 		is-warning-on = "vm.warningOn"

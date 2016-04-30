@@ -13,6 +13,9 @@ module.exports = function (){
   require('./doctores/updateDoctor/formularioUpdate.directive')(secretaria);
   require('./pacientes/pacientes.service')(secretaria);
   require('./pacientes/listadop/pacientes.controller')(secretaria);
+  require('./pacientes/updatePaciente/formularioUpdate.controller')(secretaria);
+  require('./pacientes/updatePaciente/formularioUpdate.directive')(secretaria);
+
 
 
 }
